@@ -1,6 +1,0 @@
-steps:
-  - name: 'gcr.io/cloud-builders/gsutil'
-    args: ['-m', 'cp', '-r', '.', 'gs://dissertation_samart_2023da04221/']
-
-# Optional: Set timeout or define artifacts if needed
-timeout: '600s'
