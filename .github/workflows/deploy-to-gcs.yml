@@ -35,4 +35,4 @@ jobs:
 
     - name: Upload 'project details' folder to GCS
       run: |
-        gsutil -m cp -r "project details" gs://dissertation-samarth-2023da04221/
+        gsutil -m cp -r "project_details" gs://dissertation-samarth-2023da04221/
