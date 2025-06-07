@@ -1,0 +1,26 @@
+name: Deploy to GCS
+
+on:
+  push:
+    branches:
+      - main  # change if you're using a different branch
+
+jobs:
+  upload-to-gcs:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Authenticate to Google Cloud
+      uses: google-github-actions/auth@v1
+      with:
+        credentials_json: '${{ secrets.GCP_KEY }}'
+
+    - name: Set up gcloud SDK
+      uses: google-github-actions/setup-gcloud@v1
+
+    - name: Upload files to GCS
+      run: |
+        gsutil -m cp -r ./* dissertation-samarth-2023da04221/codes/
