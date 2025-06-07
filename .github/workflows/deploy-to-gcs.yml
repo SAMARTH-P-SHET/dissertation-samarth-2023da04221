@@ -26,7 +26,7 @@ jobs:
 
     - name: Debug – Check if folder exists
       run: |
-        if [ -d "project details" ]; then
+        if [ -d "project_details" ]; then
           echo "✅ Folder 'project details' found"
         else
           echo "❌ Folder 'project details' not found"
