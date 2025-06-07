@@ -21,6 +21,18 @@ jobs:
     - name: Set up gcloud SDK
       uses: google-github-actions/setup-gcloud@v1
 
-    - name: Upload files to GCS
+    - name: Debug – List repo contents
+      run: ls -al
+
+    - name: Debug – Check if folder exists
       run: |
-        gsutil -m cp -r "./project details/"* gs://dissertation-samarth-2023da04221/
+        if [ -d "project details" ]; then
+          echo "✅ Folder 'project details' found"
+        else
+          echo "❌ Folder 'project details' not found"
+          exit 1
+        fi
+
+    - name: Upload 'project details' folder to GCS
+      run: |
+        gsutil -m cp -r "project details" gs://dissertation-samarth-2023da04221/
