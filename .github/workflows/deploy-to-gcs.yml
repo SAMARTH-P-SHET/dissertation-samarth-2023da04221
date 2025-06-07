@@ -23,4 +23,4 @@ jobs:
 
     - name: Upload files to GCS
       run: |
-        gsutil -m cp -r ./* gs://dissertation-samarth-2023da04221/codes/
+        gsutil -m cp -r "./project details" gs://dissertation-samarth-2023da04221/
