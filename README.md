@@ -4,4 +4,5 @@
 
 ## Dissertation 
 
-### Towards Automated Data Intelligence: An End-to-End Analytical Pipeline on Google Cloud using Apache Spark and BigQuery
+### Towards Automated Data Intelligence: 
+### An End-to-End Analytical Pipeline on Google Cloud using Apache Spark and BigQuery
