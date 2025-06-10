@@ -1,0 +1,53 @@
+name: Deploy DAGs to Cloud Composer GCS
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'dag/**'  # Updated to match your folder name
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      
+      - name: Install gcloud CLI
+        uses: google-github-actions/setup-gcloud@v1
+        with:
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          export_default_credentials: true
+      
+      - name: Debug - List files
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Repository contents:"
+          ls -la
+          echo "DAG folder contents:"
+          ls -la dag/ || echo "dag folder not found"
+      
+      - name: Deploy DAGs to GCS
+        run: |
+          # Create target directory if it doesn't exist
+          gsutil ls gs://database-execution-setup/ || echo "Bucket exists"
+          
+          # Copy with verbose output
+          if [ -d "dag" ]; then
+            echo "Copying DAGs..."
+            gsutil -m cp -r dag/*.py gs://database-execution-setup/dag/
+            echo "Deployment complete"
+            
+            # Verify files were copied
+            echo "Files in GCS bucket:"
+            gsutil ls gs://database-execution-setup/dag/
+          else
+            echo "ERROR: dag folder not found"
+            exit 1
+          fi
