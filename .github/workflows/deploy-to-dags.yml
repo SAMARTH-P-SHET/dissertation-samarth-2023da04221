@@ -1,0 +1,27 @@
+name: Deploy DAGs to Composer
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'dags/**.py'
+
+jobs:
+  deploy-dags:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Authenticate to Google Cloud (Composer DAG bucket)
+      uses: google-github-actions/auth@v1
+      with:
+        credentials_json: '${{ secrets.DAG_KEY }}'
+
+    - name: Set up gcloud SDK
+      uses: google-github-actions/setup-gcloud@v1
+
+    - name: Upload DAGs to Composer DAGs bucket
+      run: |
+        gsutil -m cp dags/*.py gs://us-central1-code-executor-a-f60c2f6f-bucket/dags/
