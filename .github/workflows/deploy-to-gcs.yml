@@ -3,10 +3,7 @@ name: Deploy to GCS
 on:
   push:
     branches:
-      - main  # Change if using another branch
-    paths:
-      - 'project_details/**'
-      - 'dags/**.py'
+      - main  # change if you're using a different branch
 
 jobs:
   upload-to-gcs:
@@ -19,28 +16,23 @@ jobs:
     - name: Authenticate to Google Cloud
       uses: google-github-actions/auth@v1
       with:
-        credentials_json: '${{ secrets.DAG_KEY }}'
+        credentials_json: '${{ secrets.GCP_KEY }}'
 
     - name: Set up gcloud SDK
       uses: google-github-actions/setup-gcloud@v1
 
     - name: Debug – List repo contents
-      run: ls -al && ls -al dags || echo "No dags/ folder found"
+      run: ls -al
 
-    - name: Upload 'project_details' folder to GCS
+    - name: Debug – Check if folder exists
       run: |
         if [ -d "project_details" ]; then
-          gsutil -m cp -r project_details gs://dissertation-samarth-2023da04221/
+          echo "✅ Folder 'project details' found"
         else
-          echo "❌ Folder 'project_details' not found"
+          echo "❌ Folder 'project details' not found"
           exit 1
         fi
 
-    - name: Upload DAGs to Composer bucket
+    - name: Upload 'project details' folder to GCS
       run: |
-        if [ -d "dags" ]; then
-          gsutil -m cp dags/*.py gs://us-central1-code-executor-a-f60c2f6f-bucket/dags/
-        else
-          echo "❌ Folder 'dags' not found"
-          exit 1
-        fi
+        gsutil -m cp -r project_details gs://dissertation-samarth-2023da04221/
