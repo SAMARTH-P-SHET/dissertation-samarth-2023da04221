@@ -1,0 +1,986 @@
+:: loading settings :: file = /etc/spark/conf/ivysettings.xml
+🔧 Installing required packages for EDA analysis...
+Looking in indexes: https://pypi.ci.artifacts.walmart.com/artifactory/api/pypi/public-cloud-pypi/simple, https://pypi.ci.artifacts.walmart.com/artifactory/api/pypi/pythonhosted-pypi-release-remote/simple
+Requirement already satisfied: matplotlib in /opt/conda/miniconda3/lib/python3.7/site-packages (3.5.3)
+Requirement already satisfied: pillow>=6.2.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from matplotlib) (9.5.0)
+Requirement already satisfied: cycler>=0.10 in /opt/conda/miniconda3/lib/python3.7/site-packages (from matplotlib) (0.11.0)
+Requirement already satisfied: fonttools>=4.22.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from matplotlib) (4.38.0)
+Requirement already satisfied: kiwisolver>=1.0.1 in /opt/conda/miniconda3/lib/python3.7/site-packages (from matplotlib) (1.4.5)
+Requirement already satisfied: numpy>=1.17 in /opt/conda/miniconda3/lib/python3.7/site-packages (from matplotlib) (1.19.2)
+Requirement already satisfied: pyparsing>=2.2.1 in /opt/conda/miniconda3/lib/python3.7/site-packages (from matplotlib) (3.1.4)
+Requirement already satisfied: packaging>=20.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from matplotlib) (24.0)
+Requirement already satisfied: python-dateutil>=2.7 in /opt/conda/miniconda3/lib/python3.7/site-packages (from matplotlib) (2.8.2)
+Requirement already satisfied: typing-extensions; python_version < "3.8" in /opt/conda/miniconda3/lib/python3.7/site-packages (from kiwisolver>=1.0.1->matplotlib) (4.4.0)
+Requirement already satisfied: six>=1.5 in /opt/conda/miniconda3/lib/python3.7/site-packages (from python-dateutil>=2.7->matplotlib) (1.12.0)
+✅ Successfully installed matplotlib
+Looking in indexes: https://pypi.ci.artifacts.walmart.com/artifactory/api/pypi/public-cloud-pypi/simple, https://pypi.ci.artifacts.walmart.com/artifactory/api/pypi/pythonhosted-pypi-release-remote/simple
+Requirement already satisfied: seaborn in /opt/conda/miniconda3/lib/python3.7/site-packages (0.12.2)
+Requirement already satisfied: matplotlib!=3.6.1,>=3.1 in /opt/conda/miniconda3/lib/python3.7/site-packages (from seaborn) (3.5.3)
+Requirement already satisfied: pandas>=0.25 in /opt/conda/miniconda3/lib/python3.7/site-packages (from seaborn) (1.3.5)
+Requirement already satisfied: typing_extensions; python_version < "3.8" in /opt/conda/miniconda3/lib/python3.7/site-packages (from seaborn) (4.4.0)
+Requirement already satisfied: numpy!=1.24.0,>=1.17 in /opt/conda/miniconda3/lib/python3.7/site-packages (from seaborn) (1.19.2)
+Requirement already satisfied: pillow>=6.2.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from matplotlib!=3.6.1,>=3.1->seaborn) (9.5.0)
+Requirement already satisfied: cycler>=0.10 in /opt/conda/miniconda3/lib/python3.7/site-packages (from matplotlib!=3.6.1,>=3.1->seaborn) (0.11.0)
+Requirement already satisfied: fonttools>=4.22.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from matplotlib!=3.6.1,>=3.1->seaborn) (4.38.0)
+Requirement already satisfied: kiwisolver>=1.0.1 in /opt/conda/miniconda3/lib/python3.7/site-packages (from matplotlib!=3.6.1,>=3.1->seaborn) (1.4.5)
+Requirement already satisfied: pyparsing>=2.2.1 in /opt/conda/miniconda3/lib/python3.7/site-packages (from matplotlib!=3.6.1,>=3.1->seaborn) (3.1.4)
+Requirement already satisfied: packaging>=20.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from matplotlib!=3.6.1,>=3.1->seaborn) (24.0)
+Requirement already satisfied: python-dateutil>=2.7 in /opt/conda/miniconda3/lib/python3.7/site-packages (from matplotlib!=3.6.1,>=3.1->seaborn) (2.8.2)
+Requirement already satisfied: pytz>=2017.3 in /opt/conda/miniconda3/lib/python3.7/site-packages (from pandas>=0.25->seaborn) (2022.7)
+Requirement already satisfied: six>=1.5 in /opt/conda/miniconda3/lib/python3.7/site-packages (from python-dateutil>=2.7->matplotlib!=3.6.1,>=3.1->seaborn) (1.12.0)
+✅ Successfully installed seaborn
+Looking in indexes: https://pypi.ci.artifacts.walmart.com/artifactory/api/pypi/public-cloud-pypi/simple, https://pypi.ci.artifacts.walmart.com/artifactory/api/pypi/pythonhosted-pypi-release-remote/simple
+Requirement already satisfied: pandas in /opt/conda/miniconda3/lib/python3.7/site-packages (1.3.5)
+Requirement already satisfied: python-dateutil>=2.7.3 in /opt/conda/miniconda3/lib/python3.7/site-packages (from pandas) (2.8.2)
+Requirement already satisfied: pytz>=2017.3 in /opt/conda/miniconda3/lib/python3.7/site-packages (from pandas) (2022.7)
+Requirement already satisfied: numpy>=1.17.3 in /opt/conda/miniconda3/lib/python3.7/site-packages (from pandas) (1.19.2)
+Requirement already satisfied: six>=1.5 in /opt/conda/miniconda3/lib/python3.7/site-packages (from python-dateutil>=2.7.3->pandas) (1.12.0)
+✅ Successfully installed pandas
+Looking in indexes: https://pypi.ci.artifacts.walmart.com/artifactory/api/pypi/public-cloud-pypi/simple, https://pypi.ci.artifacts.walmart.com/artifactory/api/pypi/pythonhosted-pypi-release-remote/simple
+Requirement already satisfied: numpy in /opt/conda/miniconda3/lib/python3.7/site-packages (1.19.2)
+✅ Successfully installed numpy
+Looking in indexes: https://pypi.ci.artifacts.walmart.com/artifactory/api/pypi/public-cloud-pypi/simple, https://pypi.ci.artifacts.walmart.com/artifactory/api/pypi/pythonhosted-pypi-release-remote/simple
+Requirement already satisfied: google-cloud-storage in /opt/conda/miniconda3/lib/python3.7/site-packages (3.1.1)
+Requirement already satisfied: google-api-core<3.0.0,>=2.15.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-cloud-storage) (2.25.1)
+Requirement already satisfied: google-resumable-media<3.0.0,>=2.7.2 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-cloud-storage) (2.7.2)
+Requirement already satisfied: google-auth<3.0.0,>=2.26.1 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-cloud-storage) (2.40.3)
+Requirement already satisfied: google-crc32c<2.0.0,>=1.1.3 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-cloud-storage) (1.5.0)
+Requirement already satisfied: requests<3.0.0,>=2.22.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-cloud-storage) (2.22.0)
+Requirement already satisfied: google-cloud-core<3.0.0,>=2.4.2 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-cloud-storage) (2.4.3)
+Requirement already satisfied: googleapis-common-protos<2.0.0,>=1.56.2 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-api-core<3.0.0,>=2.15.0->google-cloud-storage) (1.70.0)
+Requirement already satisfied: proto-plus<2.0.0,>=1.22.3 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-api-core<3.0.0,>=2.15.0->google-cloud-storage) (1.26.1)
+Requirement already satisfied: protobuf!=3.20.0,!=3.20.1,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<7.0.0,>=3.19.5 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-api-core<3.0.0,>=2.15.0->google-cloud-storage) (4.24.4)
+Requirement already satisfied: rsa<5,>=3.1.4 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-auth<3.0.0,>=2.26.1->google-cloud-storage) (4.9.1)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-auth<3.0.0,>=2.26.1->google-cloud-storage) (0.3.0)
+Requirement already satisfied: cachetools<6.0,>=2.0.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-auth<3.0.0,>=2.26.1->google-cloud-storage) (5.5.2)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /opt/conda/miniconda3/lib/python3.7/site-packages (from requests<3.0.0,>=2.22.0->google-cloud-storage) (1.24.2)
+Requirement already satisfied: chardet<3.1.0,>=3.0.2 in /opt/conda/miniconda3/lib/python3.7/site-packages (from requests<3.0.0,>=2.22.0->google-cloud-storage) (3.0.4)
+Requirement already satisfied: idna<2.9,>=2.5 in /opt/conda/miniconda3/lib/python3.7/site-packages (from requests<3.0.0,>=2.22.0->google-cloud-storage) (2.8)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/conda/miniconda3/lib/python3.7/site-packages (from requests<3.0.0,>=2.22.0->google-cloud-storage) (2022.12.7)
+Requirement already satisfied: importlib-metadata>1.0.0; python_version < "3.8" in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-cloud-core<3.0.0,>=2.4.2->google-cloud-storage) (4.11.4)
+Requirement already satisfied: pyasn1>=0.1.3 in /opt/conda/miniconda3/lib/python3.7/site-packages (from rsa<5,>=3.1.4->google-auth<3.0.0,>=2.26.1->google-cloud-storage) (0.5.1)
+Requirement already satisfied: typing-extensions>=3.6.4; python_version < "3.8" in /opt/conda/miniconda3/lib/python3.7/site-packages (from importlib-metadata>1.0.0; python_version < "3.8"->google-cloud-core<3.0.0,>=2.4.2->google-cloud-storage) (4.4.0)
+Requirement already satisfied: zipp>=0.5 in /opt/conda/miniconda3/lib/python3.7/site-packages (from importlib-metadata>1.0.0; python_version < "3.8"->google-cloud-core<3.0.0,>=2.4.2->google-cloud-storage) (3.11.0)
+✅ Successfully installed google-cloud-storage
+Looking in indexes: https://pypi.ci.artifacts.walmart.com/artifactory/api/pypi/public-cloud-pypi/simple, https://pypi.ci.artifacts.walmart.com/artifactory/api/pypi/pythonhosted-pypi-release-remote/simple
+Requirement already satisfied: google-cloud-bigquery in /opt/conda/miniconda3/lib/python3.7/site-packages (3.30.0)
+Requirement already satisfied: google-cloud-core<3.0.0dev,>=2.4.1 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-cloud-bigquery) (2.4.3)
+Requirement already satisfied: packaging>=20.0.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-cloud-bigquery) (24.0)
+Requirement already satisfied: google-auth<3.0.0dev,>=2.14.1 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-cloud-bigquery) (2.40.3)
+Requirement already satisfied: google-resumable-media<3.0dev,>=2.0.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-cloud-bigquery) (2.7.2)
+Requirement already satisfied: requests<3.0.0dev,>=2.21.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-cloud-bigquery) (2.22.0)
+Requirement already satisfied: google-api-core[grpc]<3.0.0dev,>=2.11.1 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-cloud-bigquery) (2.25.1)
+Requirement already satisfied: python-dateutil<3.0dev,>=2.7.3 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-cloud-bigquery) (2.8.2)
+Requirement already satisfied: importlib-metadata>1.0.0; python_version < "3.8" in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-cloud-core<3.0.0dev,>=2.4.1->google-cloud-bigquery) (4.11.4)
+Requirement already satisfied: rsa<5,>=3.1.4 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-auth<3.0.0dev,>=2.14.1->google-cloud-bigquery) (4.9.1)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-auth<3.0.0dev,>=2.14.1->google-cloud-bigquery) (0.3.0)
+Requirement already satisfied: cachetools<6.0,>=2.0.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-auth<3.0.0dev,>=2.14.1->google-cloud-bigquery) (5.5.2)
+Requirement already satisfied: google-crc32c<2.0dev,>=1.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-resumable-media<3.0dev,>=2.0.0->google-cloud-bigquery) (1.5.0)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /opt/conda/miniconda3/lib/python3.7/site-packages (from requests<3.0.0dev,>=2.21.0->google-cloud-bigquery) (1.24.2)
+Requirement already satisfied: chardet<3.1.0,>=3.0.2 in /opt/conda/miniconda3/lib/python3.7/site-packages (from requests<3.0.0dev,>=2.21.0->google-cloud-bigquery) (3.0.4)
+Requirement already satisfied: idna<2.9,>=2.5 in /opt/conda/miniconda3/lib/python3.7/site-packages (from requests<3.0.0dev,>=2.21.0->google-cloud-bigquery) (2.8)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/conda/miniconda3/lib/python3.7/site-packages (from requests<3.0.0dev,>=2.21.0->google-cloud-bigquery) (2022.12.7)
+Requirement already satisfied: googleapis-common-protos<2.0.0,>=1.56.2 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-api-core[grpc]<3.0.0dev,>=2.11.1->google-cloud-bigquery) (1.70.0)
+Requirement already satisfied: proto-plus<2.0.0,>=1.22.3 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-api-core[grpc]<3.0.0dev,>=2.11.1->google-cloud-bigquery) (1.26.1)
+Requirement already satisfied: protobuf!=3.20.0,!=3.20.1,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<7.0.0,>=3.19.5 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-api-core[grpc]<3.0.0dev,>=2.11.1->google-cloud-bigquery) (4.24.4)
+Requirement already satisfied: grpcio<2.0.0,>=1.33.2; extra == "grpc" in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-api-core[grpc]<3.0.0dev,>=2.11.1->google-cloud-bigquery) (1.62.3)
+Requirement already satisfied: grpcio-status<2.0.0,>=1.33.2; extra == "grpc" in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-api-core[grpc]<3.0.0dev,>=2.11.1->google-cloud-bigquery) (1.62.3)
+Requirement already satisfied: six>=1.5 in /opt/conda/miniconda3/lib/python3.7/site-packages (from python-dateutil<3.0dev,>=2.7.3->google-cloud-bigquery) (1.12.0)
+Requirement already satisfied: typing-extensions>=3.6.4; python_version < "3.8" in /opt/conda/miniconda3/lib/python3.7/site-packages (from importlib-metadata>1.0.0; python_version < "3.8"->google-cloud-core<3.0.0dev,>=2.4.1->google-cloud-bigquery) (4.4.0)
+Requirement already satisfied: zipp>=0.5 in /opt/conda/miniconda3/lib/python3.7/site-packages (from importlib-metadata>1.0.0; python_version < "3.8"->google-cloud-core<3.0.0dev,>=2.4.1->google-cloud-bigquery) (3.11.0)
+Requirement already satisfied: pyasn1>=0.1.3 in /opt/conda/miniconda3/lib/python3.7/site-packages (from rsa<5,>=3.1.4->google-auth<3.0.0dev,>=2.14.1->google-cloud-bigquery) (0.5.1)
+✅ Successfully installed google-cloud-bigquery
+Looking in indexes: https://pypi.ci.artifacts.walmart.com/artifactory/api/pypi/public-cloud-pypi/simple, https://pypi.ci.artifacts.walmart.com/artifactory/api/pypi/pythonhosted-pypi-release-remote/simple
+Requirement already satisfied: plotly in /opt/conda/miniconda3/lib/python3.7/site-packages (5.18.0)
+Requirement already satisfied: tenacity>=6.2.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from plotly) (8.2.3)
+Requirement already satisfied: packaging in /opt/conda/miniconda3/lib/python3.7/site-packages (from plotly) (24.0)
+✅ Successfully installed plotly
+Looking in indexes: https://pypi.ci.artifacts.walmart.com/artifactory/api/pypi/public-cloud-pypi/simple, https://pypi.ci.artifacts.walmart.com/artifactory/api/pypi/pythonhosted-pypi-release-remote/simple
+Requirement already satisfied: scipy in /opt/conda/miniconda3/lib/python3.7/site-packages (1.7.3)
+Requirement already satisfied: numpy<1.23.0,>=1.16.5 in /opt/conda/miniconda3/lib/python3.7/site-packages (from scipy) (1.19.2)
+✅ Successfully installed scipy
+Looking in indexes: https://pypi.ci.artifacts.walmart.com/artifactory/api/pypi/public-cloud-pypi/simple, https://pypi.ci.artifacts.walmart.com/artifactory/api/pypi/pythonhosted-pypi-release-remote/simple
+Requirement already satisfied: scikit-learn in /opt/conda/miniconda3/lib/python3.7/site-packages (1.0.2)
+Requirement already satisfied: scipy>=1.1.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from scikit-learn) (1.7.3)
+Requirement already satisfied: threadpoolctl>=2.0.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from scikit-learn) (3.1.0)
+Requirement already satisfied: numpy>=1.14.6 in /opt/conda/miniconda3/lib/python3.7/site-packages (from scikit-learn) (1.19.2)
+Requirement already satisfied: joblib>=0.11 in /opt/conda/miniconda3/lib/python3.7/site-packages (from scikit-learn) (1.3.2)
+✅ Successfully installed scikit-learn
+Looking in indexes: https://pypi.ci.artifacts.walmart.com/artifactory/api/pypi/public-cloud-pypi/simple, https://pypi.ci.artifacts.walmart.com/artifactory/api/pypi/pythonhosted-pypi-release-remote/simple
+Requirement already satisfied: pandas-gbq in /opt/conda/miniconda3/lib/python3.7/site-packages (0.21.0)
+Requirement already satisfied: packaging>=20.0.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from pandas-gbq) (24.0)
+Requirement already satisfied: numpy>=1.16.6 in /opt/conda/miniconda3/lib/python3.7/site-packages (from pandas-gbq) (1.19.2)
+Requirement already satisfied: setuptools in /opt/conda/miniconda3/lib/python3.7/site-packages (from pandas-gbq) (41.4.0)
+Requirement already satisfied: google-auth>=2.13.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from pandas-gbq) (2.40.3)
+Requirement already satisfied: google-cloud-bigquery-storage<3.0.0dev,>=2.16.2 in /opt/conda/miniconda3/lib/python3.7/site-packages (from pandas-gbq) (2.32.0)
+Requirement already satisfied: db-dtypes<2.0.0,>=1.0.4 in /opt/conda/miniconda3/lib/python3.7/site-packages (from pandas-gbq) (1.4.2)
+Requirement already satisfied: pyarrow>=3.0.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from pandas-gbq) (12.0.1)
+Requirement already satisfied: google-api-core<3.0.0dev,>=2.10.2 in /opt/conda/miniconda3/lib/python3.7/site-packages (from pandas-gbq) (2.25.1)
+Requirement already satisfied: google-auth-oauthlib>=0.7.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from pandas-gbq) (1.2.2)
+Requirement already satisfied: pydata-google-auth>=1.5.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from pandas-gbq) (1.8.2)
+Requirement already satisfied: google-cloud-bigquery<4.0.0dev,>=3.3.5 in /opt/conda/miniconda3/lib/python3.7/site-packages (from pandas-gbq) (3.30.0)
+Requirement already satisfied: pandas>=1.1.4 in /opt/conda/miniconda3/lib/python3.7/site-packages (from pandas-gbq) (1.3.5)
+Requirement already satisfied: rsa<5,>=3.1.4 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-auth>=2.13.0->pandas-gbq) (4.9.1)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-auth>=2.13.0->pandas-gbq) (0.3.0)
+Requirement already satisfied: cachetools<6.0,>=2.0.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-auth>=2.13.0->pandas-gbq) (5.5.2)
+Requirement already satisfied: protobuf!=3.20.0,!=3.20.1,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<7.0.0,>=3.20.2 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-cloud-bigquery-storage<3.0.0dev,>=2.16.2->pandas-gbq) (4.24.4)
+Requirement already satisfied: proto-plus<2.0.0,>=1.22.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-cloud-bigquery-storage<3.0.0dev,>=2.16.2->pandas-gbq) (1.26.1)
+Requirement already satisfied: googleapis-common-protos<2.0.0,>=1.56.2 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-api-core<3.0.0dev,>=2.10.2->pandas-gbq) (1.70.0)
+Requirement already satisfied: requests<3.0.0,>=2.18.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-api-core<3.0.0dev,>=2.10.2->pandas-gbq) (2.22.0)
+Requirement already satisfied: requests-oauthlib>=0.7.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-auth-oauthlib>=0.7.0->pandas-gbq) (2.0.0)
+Requirement already satisfied: google-cloud-core<3.0.0dev,>=2.4.1 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-cloud-bigquery<4.0.0dev,>=3.3.5->pandas-gbq) (2.4.3)
+Requirement already satisfied: google-resumable-media<3.0dev,>=2.0.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-cloud-bigquery<4.0.0dev,>=3.3.5->pandas-gbq) (2.7.2)
+Requirement already satisfied: python-dateutil<3.0dev,>=2.7.3 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-cloud-bigquery<4.0.0dev,>=3.3.5->pandas-gbq) (2.8.2)
+Requirement already satisfied: pytz>=2017.3 in /opt/conda/miniconda3/lib/python3.7/site-packages (from pandas>=1.1.4->pandas-gbq) (2022.7)
+Requirement already satisfied: pyasn1>=0.1.3 in /opt/conda/miniconda3/lib/python3.7/site-packages (from rsa<5,>=3.1.4->google-auth>=2.13.0->pandas-gbq) (0.5.1)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /opt/conda/miniconda3/lib/python3.7/site-packages (from requests<3.0.0,>=2.18.0->google-api-core<3.0.0dev,>=2.10.2->pandas-gbq) (1.24.2)
+Requirement already satisfied: chardet<3.1.0,>=3.0.2 in /opt/conda/miniconda3/lib/python3.7/site-packages (from requests<3.0.0,>=2.18.0->google-api-core<3.0.0dev,>=2.10.2->pandas-gbq) (3.0.4)
+Requirement already satisfied: idna<2.9,>=2.5 in /opt/conda/miniconda3/lib/python3.7/site-packages (from requests<3.0.0,>=2.18.0->google-api-core<3.0.0dev,>=2.10.2->pandas-gbq) (2.8)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/conda/miniconda3/lib/python3.7/site-packages (from requests<3.0.0,>=2.18.0->google-api-core<3.0.0dev,>=2.10.2->pandas-gbq) (2022.12.7)
+Requirement already satisfied: oauthlib>=3.0.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from requests-oauthlib>=0.7.0->google-auth-oauthlib>=0.7.0->pandas-gbq) (3.2.2)
+Requirement already satisfied: importlib-metadata>1.0.0; python_version < "3.8" in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-cloud-core<3.0.0dev,>=2.4.1->google-cloud-bigquery<4.0.0dev,>=3.3.5->pandas-gbq) (4.11.4)
+Requirement already satisfied: google-crc32c<2.0dev,>=1.0 in /opt/conda/miniconda3/lib/python3.7/site-packages (from google-resumable-media<3.0dev,>=2.0.0->google-cloud-bigquery<4.0.0dev,>=3.3.5->pandas-gbq) (1.5.0)
+Requirement already satisfied: six>=1.5 in /opt/conda/miniconda3/lib/python3.7/site-packages (from python-dateutil<3.0dev,>=2.7.3->google-cloud-bigquery<4.0.0dev,>=3.3.5->pandas-gbq) (1.12.0)
+Requirement already satisfied: typing-extensions>=3.6.4; python_version < "3.8" in /opt/conda/miniconda3/lib/python3.7/site-packages (from importlib-metadata>1.0.0; python_version < "3.8"->google-cloud-core<3.0.0dev,>=2.4.1->google-cloud-bigquery<4.0.0dev,>=3.3.5->pandas-gbq) (4.4.0)
+Requirement already satisfied: zipp>=0.5 in /opt/conda/miniconda3/lib/python3.7/site-packages (from importlib-metadata>1.0.0; python_version < "3.8"->google-cloud-core<3.0.0dev,>=2.4.1->google-cloud-bigquery<4.0.0dev,>=3.3.5->pandas-gbq) (3.11.0)
+✅ Successfully installed pandas-gbq
+Looking in indexes: https://pypi.ci.artifacts.walmart.com/artifactory/api/pypi/public-cloud-pypi/simple, https://pypi.ci.artifacts.walmart.com/artifactory/api/pypi/pythonhosted-pypi-release-remote/simple
+Requirement already satisfied: pyarrow in /opt/conda/miniconda3/lib/python3.7/site-packages (12.0.1)
+Requirement already satisfied: numpy>=1.16.6 in /opt/conda/miniconda3/lib/python3.7/site-packages (from pyarrow) (1.19.2)
+✅ Successfully installed pyarrow
+
+📦 All packages installation completed!
+✅ Spark Session initialized successfully
+👤 Analysis by: SAMARTH-P-SHET
+📅 Analysis Date: 2025-06-28 18:48:49 UTC
+📊 Starting EDA Analysis for Retail Competitive Pricing Dataset
+🔍 Dataset Scope: Multi-week retail competitive pricing data
+
+
+25/06/29 18:54:06 INFO org.apache.spark.SparkEnv: Registering MapOutputTracker
+25/06/29 18:54:06 INFO org.apache.spark.SparkEnv: Registering BlockManagerMaster
+25/06/29 18:54:06 INFO org.apache.spark.SparkEnv: Registering OutputCommitCoordinator
+25/06/29 18:54:06 INFO org.spark_project.jetty.util.log: Logging initialized @11084ms to org.spark_project.jetty.util.log.Slf4jLog
+25/06/29 18:54:06 INFO org.spark_project.jetty.server.Server: jetty-9.4.z-SNAPSHOT; built: unknown; git: unknown; jvm 1.8.0_382-b05
+25/06/29 18:54:06 INFO org.spark_project.jetty.server.Server: Started @11169ms
+25/06/29 18:54:06 INFO org.spark_project.jetty.server.AbstractConnector: Started ServerConnector@21cac205{HTTP/1.1, (http/1.1)}{0.0.0.0:42941}
+25/06/29 18:54:07 INFO org.apache.hadoop.yarn.client.RMProxy: Connecting to ResourceManager at ca-pricing-price-mgmt-highsecure-gm-ecomm-ps-m/250.0.18.57:8032
+25/06/29 18:54:07 INFO org.apache.hadoop.yarn.client.AHSProxy: Connecting to Application History server at ca-pricing-price-mgmt-highsecure-gm-ecomm-ps-m/250.0.18.57:10200
+25/06/29 18:54:07 INFO org.apache.hadoop.conf.Configuration: resource-types.xml not found
+25/06/29 18:54:07 INFO org.apache.hadoop.yarn.util.resource.ResourceUtils: Unable to find 'resource-types.xml'.
+25/06/29 18:54:07 INFO org.apache.hadoop.yarn.util.resource.ResourceUtils: Adding resource type - name = memory-mb, units = Mi, type = COUNTABLE
+25/06/29 18:54:07 INFO org.apache.hadoop.yarn.util.resource.ResourceUtils: Adding resource type - name = vcores, units = , type = COUNTABLE
+25/06/29 18:54:09 INFO org.apache.hadoop.yarn.client.api.impl.YarnClientImpl: Submitted application application_1751215648816_0018
+✅ Spark Session initialized successfully
+Spark Version: 2.4.8
+
+
+📊 Starting EDA Analysis for Retail Competitive Pricing Dataset
+25/06/29 18:54:15 WARN org.apache.hadoop.hive.conf.HiveConf: HiveConf of name hive.server2.materializedviews.cache.at.startup does not exist
+25/06/29 18:54:15 WARN org.apache.hadoop.hive.conf.HiveConf: HiveConf of name hive.merge.nway.joins does not exist
+ivysettings.xml file not found in HIVE_HOME or HIVE_CONF_DIR,/etc/spark/conf.dist/ivysettings.xml will be used
+25/06/29 18:54:15 INFO DependencyResolver: ivysettings.xml file not found in HIVE_HOME or HIVE_CONF_DIR,/etc/spark/conf.dist/ivysettings.xml will be used
+25/06/29 18:54:15 INFO hive.metastore: Trying to connect to metastore with URI thrift://ca-pricing-price-mgmt-highsecure-gm-ecomm-ps-m:9083
+25/06/29 18:54:15 INFO hive.metastore: Connected to metastore.
+25/06/29 18:54:15 INFO org.apache.hadoop.hive.ql.session.SessionState: Created local directory: /tmp/8df0ef9f-c472-42ac-b19b-b56d9d99af19_resources
+25/06/29 18:54:15 INFO org.apache.hadoop.hive.ql.session.SessionState: Created HDFS directory: /var/tmp/hive-scratch/root/8df0ef9f-c472-42ac-b19b-b56d9d99af19
+25/06/29 18:54:15 INFO org.apache.hadoop.hive.ql.session.SessionState: Created local directory: /var/tmp/hive-scratch/8df0ef9f-c472-42ac-b19b-b56d9d99af19
+25/06/29 18:54:15 INFO org.apache.hadoop.hive.ql.session.SessionState: Created HDFS directory: /var/tmp/hive-scratch/root/8df0ef9f-c472-42ac-b19b-b56d9d99af19/_tmp_space.db
+
+
+✅ Data loaded from Hive table: <table_schema>.Instore_weekly_data
+25/06/29 18:54:20 WARN org.apache.spark.util.Utils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.debug.maxToStringFields' in SparkEnv.conf.
+📊 Dataset shape: 9105081 rows, 74 columns
+root
+ |-- job_id: string (nullable = true)
+ |-- wm_year: integer (nullable = true)
+ |-- wm_store_id: integer (nullable = true)
+ |-- wm_address: string (nullable = true)
+ |-- wm_city: string (nullable = true)
+ |-- wm_region: string (nullable = true)
+ |-- wm_zone: string (nullable = true)
+ |-- wm_bu_grp: string (nullable = true)
+ |-- wm_bu_grp_2: string (nullable = true)
+ |-- dept_nbr: integer (nullable = true)
+ |-- dept_subcatg_nbr: long (nullable = true)
+ |-- fineline_nbr: integer (nullable = true)
+ |-- brand_type: string (nullable = true)
+ |-- brand_id: long (nullable = true)
+ |-- brand_desc: string (nullable = true)
+ |-- vendor_id: long (nullable = true)
+ |-- vendor_desc: string (nullable = true)
+ |-- product_type: string (nullable = true)
+ |-- id: decimal(18,4) (nullable = true)
+ |-- upc_nbr: decimal(18,4) (nullable = true)
+ |-- item_nbr: long (nullable = true)
+ |-- upc_desc: string (nullable = true)
+ |-- alt_desc: string (nullable = true)
+ |-- sell_size: integer (nullable = true)
+ |-- uom: string (nullable = true)
+ |-- item_status: string (nullable = true)
+ |-- base_unit_retail_amt: decimal(18,4) (nullable = true)
+ |-- wm_reg_price: decimal(18,4) (nullable = true)
+ |-- wm_live_price: decimal(18,4) (nullable = true)
+ |-- wm_price_type: string (nullable = true)
+ |-- wm_promo_status: string (nullable = true)
+ |-- nbr_of_variants_family: integer (nullable = true)
+ |-- perc_of_dept_sales: decimal(18,4) (nullable = true)
+ |-- market_data: string (nullable = true)
+ |-- banner_type: string (nullable = true)
+ |-- banner_classification: string (nullable = true)
+ |-- banner_name: string (nullable = true)
+ |-- banner_address: string (nullable = true)
+ |-- wm_city1: string (nullable = true)
+ |-- banner_store_id: string (nullable = true)
+ |-- store_no: integer (nullable = true)
+ |-- audit_desc: string (nullable = true)
+ |-- size_variance_treshold: string (nullable = true)
+ |-- comp_upc: decimal(18,4) (nullable = true)
+ |-- comp_item_desc: string (nullable = true)
+ |-- comp_reg: decimal(18,4) (nullable = true)
+ |-- comp_live: decimal(18,4) (nullable = true)
+ |-- comp_price_type: string (nullable = true)
+ |-- comp_promo_status: string (nullable = true)
+ |-- comp_brand: string (nullable = true)
+ |-- comp_item_size: float (nullable = true)
+ |-- comp_item_uom: string (nullable = true)
+ |-- reg_price_gap: decimal(18,4) (nullable = true)
+ |-- live_price_gap: decimal(18,4) (nullable = true)
+ |-- reg_price_gap_perc: decimal(18,4) (nullable = true)
+ |-- live_price_gap_perc: decimal(18,4) (nullable = true)
+ |-- item_win: string (nullable = true)
+ |-- item_draw: string (nullable = true)
+ |-- item_loss: string (nullable = true)
+ |-- comments: string (nullable = true)
+ |-- alt_upc: decimal(18,4) (nullable = true)
+ |-- alt_item_desc: string (nullable = true)
+ |-- alt_brand: string (nullable = true)
+ |-- alt_item_size: float (nullable = true)
+ |-- alt_item_uom: string (nullable = true)
+ |-- comp_reg_equalized_price: float (nullable = true)
+ |-- comp_live_equalized_price: float (nullable = true)
+ |-- match_flag: string (nullable = true)
+ |-- equalization_factor: float (nullable = true)
+ |-- scanned: string (nullable = true)
+ |-- comp_multi_price: decimal(18,4) (nullable = true)
+ |-- ispullfwd: string (nullable = true)
+ |-- image_link: string (nullable = true)
+ |-- wm_week: integer (nullable = true)
+
++------+-------+-----------+--------------------+-----------+---------+-------+---------+-----------+--------+----------------+------------+----------+--------+----------+---------+--------------------+------------+------------+---------------+--------+--------------------+--------------------+---------+---+-----------+--------------------+------------+-------------+-------------+---------------+----------------------+------------------+-----------+-----------+---------------------+-------------+--------------------+-----------+--------------------+--------+----------+----------------------+---------------+--------------------+--------+---------+---------------+-----------------+----------+--------------+-------------+-------------+--------------+------------------+-------------------+--------+---------+---------+--------+-------+-------------+---------+-------------+------------+------------------------+-------------------------+----------+-------------------+-------+----------------+---------+----------+-------+
+|job_id|wm_year|wm_store_id|          wm_address|    wm_city|wm_region|wm_zone|wm_bu_grp|wm_bu_grp_2|dept_nbr|dept_subcatg_nbr|fineline_nbr|brand_type|brand_id|brand_desc|vendor_id|         vendor_desc|product_type|          id|        upc_nbr|item_nbr|            upc_desc|            alt_desc|sell_size|uom|item_status|base_unit_retail_amt|wm_reg_price|wm_live_price|wm_price_type|wm_promo_status|nbr_of_variants_family|perc_of_dept_sales|market_data|banner_type|banner_classification|  banner_name|      banner_address|   wm_city1|     banner_store_id|store_no|audit_desc|size_variance_treshold|       comp_upc|      comp_item_desc|comp_reg|comp_live|comp_price_type|comp_promo_status|comp_brand|comp_item_size|comp_item_uom|reg_price_gap|live_price_gap|reg_price_gap_perc|live_price_gap_perc|item_win|item_draw|item_loss|comments|alt_upc|alt_item_desc|alt_brand|alt_item_size|alt_item_uom|comp_reg_equalized_price|comp_live_equalized_price|match_flag|equalization_factor|scanned|comp_multi_price|ispullfwd|image_link|wm_week|
++------+-------+-----------+--------------------+-----------+---------+-------+---------+-----------+--------+----------------+------------+----------+--------+----------+---------+--------------------+------------+------------+---------------+--------+--------------------+--------------------+---------+---+-----------+--------------------+------------+-------------+-------------+---------------+----------------------+------------------+-----------+-----------+---------------------+-------------+--------------------+-----------+--------------------+--------+----------+----------------------+---------------+--------------------+--------+---------+---------------+-----------------+----------+--------------+-------------+-------------+--------------+------------------+-------------------+--------+---------+---------+--------+-------+-------------+---------+-------------+------------+------------------------+-------------------------+----------+-------------------+-------+----------------+---------+----------+-------+
+| J0726|   2024|       1061|800 MATHESON BLVD...|MISSISSAUGA|  ONTARIO|ONTARIO|      0.0|        0.0|       1|           20579|         240|        NB|  319547|E-TWIZZLER|   301259|  HERSHEY CANADA INC|          FG| 334520.0000|5660081630.0000|  103161|TWIZZLER NIBS CHERRY|TWIZZLER NIBS CHE...|      400| GR|          A|              2.7700|      0.0000|       0.0000|          0.0|              0|                     0|            0.0000|        0.0|     TIER 3|             DISCOUNT|    DOLLARAMA|     885 PLYMOUTH DR|MISSISSAUGA|DOLLARAMA-ONTARIO...|    7500|        0.|                   0.0|5660080630.0000|TEIZZLERS NIBS CH...|  1.7500|   1.7500|        REGULAR|                N|          |         225.0|           GR|       0.0000|        0.0000|            0.0000|             0.0000|       0|        0|        0|     0.0| 0.0000|          0.0|      0.0|          0.0|         0.0|               3.1111112|                3.1111112|       0.0|          1.7777778|    0.0|          0.0000|      0.0|       0.0|  12450|
+| J0607|   2024|       1004|2525 ST CLAIR AVE...|    TORONTO|  ONTARIO|ONTARIO|         |           |       1|           12613|        6630|        NB|  321466|  E-LINDOR|    62364|LINDT & SPRUNGLI ...|         KVI|1772077.0000|3746608030.0000|  116865|         LINDOR MILK|KVI: 120G LINDOR ...|      120| GR|          A|              7.9800|        null|         null|             |               |                  null|              null|           |     TIER 3|             DISCOUNT|      LOBLAWS|    270 THE KINGSWAY|    TORONTO|LOBLAWS-ONTARIO-1004|    7087|          |                      |3746608030.0000|KVI: 120G LINDOR ...|  0.0000|   0.0000|       ITEM N/A|                 |  E-LINDOR|         120.0|           GR|         null|          null|              null|               null|        |         |         |        |   null|             |         |         null|            |                    null|                     null|          |               null|       |            null|         |          |  12450|
+| J0595|   2024|       1081|8300 HWY 27: WOOD...| WOODBRIDGE|  ONTARIO|ONTARIO|         |           |       1|           12613|        6630|        NB|  321466|  E-LINDOR|    62364|LINDT & SPRUNGLI ...|         KVI|1772077.0000|3746608030.0000|  116865|         LINDOR MILK|KVI: 120G LINDOR ...|      120| GR|          A|              7.9800|        null|         null|             |               |                  null|              null|           |   NEXT BES|             DISCOUNT|    NO FRILLS|      1530 ALBION RD| WOODBRIDGE|NO FRILLS-ONTARIO...|    7024|          |                      |3746608030.0000|KVI: 120G LINDOR ...|  0.0000|   0.0000|       ITEM N/A|                 |  E-LINDOR|         120.0|           GR|         null|          null|              null|               null|        |         |         |        |   null|             |         |         null|            |                    null|                     null|          |               null|       |            null|         |          |  12450|
+| J0600|   2024|       1089|7979 11 ST SE: CA...|    CALGARY|     WEST|   WEST|         |           |       1|           12613|        6630|        NB|  321466|  E-LINDOR|    62364|LINDT & SPRUNGLI ...|         KVI|1772077.0000|3746608030.0000|  116865|         LINDOR MILK|KVI: 120G LINDOR ...|      120| GR|          A|              7.9800|        null|         null|             |               |                  null|              null|           |     TIER 2|         CONVENTIONAL|       SOBEYS|7 MAHOGANY PLAZA ...|    CALGARY|    SOBEYS-WEST-1089|    7114|          |                      |3746608030.0000|KVI: 120G LINDOR ...|  0.0000|   0.0000|       ITEM N/A|                 |  E-LINDOR|         120.0|           GR|         null|          null|              null|               null|        |         |         |        |   null|             |         |         null|            |                    null|                     null|          |               null|       |            null|         |          |  12450|
+| J0604|   2024|       1104|3585 GRANDVIEW HW...|  VANCOUVER|     WEST|   WEST|         |           |       1|           12613|        6630|        NB|  321466|  E-LINDOR|    62364|LINDT & SPRUNGLI ...|         KVI|1772077.0000|3746608030.0000|  116865|         LINDOR MILK|KVI: 120G LINDOR ...|      120| GR|          A|              7.9800|        null|         null|             |               |                  null|              null|           |     TIER 2|             DISCOUNT|SAVE ON FOODS|1403 E KING EDWAR...|  VANCOUVER|SAVE ON FOODS-WES...|    7122|          |                      |3746608030.0000|KVI: 120G LINDOR ...|  0.0000|   0.0000|       ITEM N/A|                 |  E-LINDOR|         120.0|           GR|         null|          null|              null|               null|        |         |         |        |   null|             |         |         null|            |                    null|                     null|          |               null|       |            null|         |          |  12450|
++------+-------+-----------+--------------------+-----------+---------+-------+---------+-----------+--------+----------------+------------+----------+--------+----------+---------+--------------------+------------+------------+---------------+--------+--------------------+--------------------+---------+---+-----------+--------------------+------------+-------------+-------------+---------------+----------------------+------------------+-----------+-----------+---------------------+-------------+--------------------+-----------+--------------------+--------+----------+----------------------+---------------+--------------------+--------+---------+---------------+-----------------+----------+--------------+-------------+-------------+--------------+------------------+-------------------+--------+---------+---------+--------+-------+-------------+---------+-------------+------------+------------------------+-------------------------+----------+-------------------+-------+----------------+---------+----------+-------+
+only showing top 5 rows
+
+
+📊 INITIAL DATA EXPLORATION
+==================================================
+📈 Dataset Shape: 9105081 rows × 74 columns
+🗓️  Analysis performed by: SAMARTH-P-SHET
+⏰ Analysis timestamp: 2025-06-28 18:53:02 UTC
+
+🔍 SCHEMA ANALYSIS
+------------------------------
+📋 Column Information:
+              Column_Name         Data_Type  Nullable
+                   job_id        StringType      True
+                  wm_year       IntegerType      True
+              wm_store_id       IntegerType      True
+               wm_address        StringType      True
+                  wm_city        StringType      True
+                wm_region        StringType      True
+                  wm_zone        StringType      True
+                wm_bu_grp        StringType      True
+              wm_bu_grp_2        StringType      True
+                 dept_nbr       IntegerType      True
+         dept_subcatg_nbr          LongType      True
+             fineline_nbr       IntegerType      True
+               brand_type        StringType      True
+                 brand_id          LongType      True
+               brand_desc        StringType      True
+                vendor_id          LongType      True
+              vendor_desc        StringType      True
+             product_type        StringType      True
+                       id DecimalType(18,4)      True
+                  upc_nbr DecimalType(18,4)      True
+                 item_nbr          LongType      True
+                 upc_desc        StringType      True
+                 alt_desc        StringType      True
+                sell_size       IntegerType      True
+                      uom        StringType      True
+              item_status        StringType      True
+     base_unit_retail_amt DecimalType(18,4)      True
+             wm_reg_price DecimalType(18,4)      True
+            wm_live_price DecimalType(18,4)      True
+            wm_price_type        StringType      True
+          wm_promo_status        StringType      True
+   nbr_of_variants_family       IntegerType      True
+       perc_of_dept_sales DecimalType(18,4)      True
+              market_data        StringType      True
+              banner_type        StringType      True
+    banner_classification        StringType      True
+              banner_name        StringType      True
+           banner_address        StringType      True
+                 wm_city1        StringType      True
+          banner_store_id        StringType      True
+                 store_no       IntegerType      True
+               audit_desc        StringType      True
+   size_variance_treshold        StringType      True
+                 comp_upc DecimalType(18,4)      True
+           comp_item_desc        StringType      True
+                 comp_reg DecimalType(18,4)      True
+                comp_live DecimalType(18,4)      True
+          comp_price_type        StringType      True
+        comp_promo_status        StringType      True
+               comp_brand        StringType      True
+           comp_item_size         FloatType      True
+            comp_item_uom        StringType      True
+            reg_price_gap DecimalType(18,4)      True
+           live_price_gap DecimalType(18,4)      True
+       reg_price_gap_perc DecimalType(18,4)      True
+      live_price_gap_perc DecimalType(18,4)      True
+                 item_win        StringType      True
+                item_draw        StringType      True
+                item_loss        StringType      True
+                 comments        StringType      True
+                  alt_upc DecimalType(18,4)      True
+            alt_item_desc        StringType      True
+                alt_brand        StringType      True
+            alt_item_size         FloatType      True
+             alt_item_uom        StringType      True
+ comp_reg_equalized_price         FloatType      True
+comp_live_equalized_price         FloatType      True
+               match_flag        StringType      True
+      equalization_factor         FloatType      True
+                  scanned        StringType      True
+         comp_multi_price DecimalType(18,4)      True
+                ispullfwd        StringType      True
+               image_link        StringType      True
+                  wm_week       IntegerType      True
+
+🔍 DATA QUALITY CHECK
+-------------------------
+Total Records: 9,105,081
+
+Checking each column for missing values:
+✅ job_id: Complete
+✅ wm_year: Complete
+✅ wm_store_id: Complete
+✅ wm_address: Complete
+✅ wm_city: Complete
+✅ wm_region: Complete
+✅ wm_zone: Complete
+✅ wm_bu_grp: Complete
+✅ wm_bu_grp_2: Complete
+✅ dept_nbr: Complete
+✅ dept_subcatg_nbr: Complete
+✅ fineline_nbr: Complete
+✅ brand_type: Complete
+⚠️  brand_id: 561 nulls (0.0%)
+✅ brand_desc: Complete
+⚠️  vendor_id: 573 nulls (0.0%)
+✅ vendor_desc: Complete
+✅ product_type: Complete
+⚠️  id: 4,369 nulls (0.0%)
+✅ upc_nbr: Complete
+⚠️  item_nbr: 50 nulls (0.0%)
+⚠️  upc_desc: 616 nulls (0.0%)
+⚠️  alt_desc: 616 nulls (0.0%)
+⚠️  sell_size: 8,302 nulls (0.1%)
+⚠️  uom: 616 nulls (0.0%)
+⚠️  item_status: 616 nulls (0.0%)
+⚠️  base_unit_retail_amt: 870 nulls (0.0%)
+⚠️  wm_reg_price: 6,533,926 nulls (71.8%)
+⚠️  wm_live_price: 6,533,926 nulls (71.8%)
+⚠️  wm_price_type: 616 nulls (0.0%)
+⚠️  wm_promo_status: 616 nulls (0.0%)
+⚠️  nbr_of_variants_family: 6,533,926 nulls (71.8%)
+⚠️  perc_of_dept_sales: 6,533,926 nulls (71.8%)
+⚠️  market_data: 616 nulls (0.0%)
+⚠️  banner_type: 616 nulls (0.0%)
+⚠️  banner_classification: 616 nulls (0.0%)
+⚠️  banner_name: 616 nulls (0.0%)
+⚠️  banner_address: 616 nulls (0.0%)
+⚠️  wm_city1: 616 nulls (0.0%)
+⚠️  banner_store_id: 616 nulls (0.0%)
+⚠️  store_no: 616 nulls (0.0%)
+⚠️  audit_desc: 616 nulls (0.0%)
+⚠️  size_variance_treshold: 616 nulls (0.0%)
+⚠️  comp_upc: 616 nulls (0.0%)
+⚠️  comp_item_desc: 616 nulls (0.0%)
+⚠️  comp_reg: 616 nulls (0.0%)
+⚠️  comp_live: 616 nulls (0.0%)
+⚠️  comp_price_type: 616 nulls (0.0%)
+⚠️  comp_promo_status: 616 nulls (0.0%)
+⚠️  comp_brand: 616 nulls (0.0%)
+⚠️  comp_item_size: 644 nulls (0.0%)
+⚠️  comp_item_uom: 616 nulls (0.0%)
+⚠️  reg_price_gap: 2,310,384 nulls (25.4%)
+⚠️  live_price_gap: 2,083,205 nulls (22.9%)
+⚠️  reg_price_gap_perc: 6,533,926 nulls (71.8%)
+⚠️  live_price_gap_perc: 6,533,926 nulls (71.8%)
+⚠️  item_win: 616 nulls (0.0%)
+⚠️  item_draw: 616 nulls (0.0%)
+⚠️  item_loss: 616 nulls (0.0%)
+⚠️  comments: 617 nulls (0.0%)
+⚠️  alt_upc: 6,521,014 nulls (71.6%)
+⚠️  alt_item_desc: 617 nulls (0.0%)
+⚠️  alt_brand: 617 nulls (0.0%)
+⚠️  alt_item_size: 6,524,745 nulls (71.7%)
+⚠️  alt_item_uom: 617 nulls (0.0%)
+⚠️  comp_reg_equalized_price: 5,960,882 nulls (65.5%)
+⚠️  comp_live_equalized_price: 5,911,505 nulls (64.9%)
+⚠️  match_flag: 617 nulls (0.0%)
+⚠️  equalization_factor: 5,715,857 nulls (62.8%)
+⚠️  scanned: 617 nulls (0.0%)
+⚠️  comp_multi_price: 6,366,003 nulls (69.9%)
+⚠️  ispullfwd: 617 nulls (0.0%)
+⚠️  image_link: 617 nulls (0.0%)
+✅ wm_week: Complete
+
+✅ Missing values check completed
+
+💾 SAVING INITIAL ANALYSIS RESULTS
+----------------------------------------
+⚠️  Could not save to GCS: name 'blob_schema' is not defined
+📝 Results will be displayed in console only
+
+👀 SAMPLE DATA PREVIEW
+-------------------------
+📋 First 5 records from the dataset:
++------+-------+-----------+--------------------+-----------+---------+-------+---------+-----------+--------+----------------+------------+----------+--------+----------+---------+--------------------+------------+------------+---------------+--------+--------------------+--------------------+---------+---+-----------+--------------------+------------+-------------+-------------+---------------+----------------------+------------------+-----------+-----------+---------------------+-------------+--------------------+-----------+--------------------+--------+----------+----------------------+---------------+--------------------+--------+---------+---------------+-----------------+----------+--------------+-------------+-------------+--------------+------------------+-------------------+--------+---------+---------+--------+-------+-------------+---------+-------------+------------+------------------------+-------------------------+----------+-------------------+-------+----------------+---------+----------+-------+
+|job_id|wm_year|wm_store_id|          wm_address|    wm_city|wm_region|wm_zone|wm_bu_grp|wm_bu_grp_2|dept_nbr|dept_subcatg_nbr|fineline_nbr|brand_type|brand_id|brand_desc|vendor_id|         vendor_desc|product_type|          id|        upc_nbr|item_nbr|            upc_desc|            alt_desc|sell_size|uom|item_status|base_unit_retail_amt|wm_reg_price|wm_live_price|wm_price_type|wm_promo_status|nbr_of_variants_family|perc_of_dept_sales|market_data|banner_type|banner_classification|  banner_name|      banner_address|   wm_city1|     banner_store_id|store_no|audit_desc|size_variance_treshold|       comp_upc|      comp_item_desc|comp_reg|comp_live|comp_price_type|comp_promo_status|comp_brand|comp_item_size|comp_item_uom|reg_price_gap|live_price_gap|reg_price_gap_perc|live_price_gap_perc|item_win|item_draw|item_loss|comments|alt_upc|alt_item_desc|alt_brand|alt_item_size|alt_item_uom|comp_reg_equalized_price|comp_live_equalized_price|match_flag|equalization_factor|scanned|comp_multi_price|ispullfwd|image_link|wm_week|
++------+-------+-----------+--------------------+-----------+---------+-------+---------+-----------+--------+----------------+------------+----------+--------+----------+---------+--------------------+------------+------------+---------------+--------+--------------------+--------------------+---------+---+-----------+--------------------+------------+-------------+-------------+---------------+----------------------+------------------+-----------+-----------+---------------------+-------------+--------------------+-----------+--------------------+--------+----------+----------------------+---------------+--------------------+--------+---------+---------------+-----------------+----------+--------------+-------------+-------------+--------------+------------------+-------------------+--------+---------+---------+--------+-------+-------------+---------+-------------+------------+------------------------+-------------------------+----------+-------------------+-------+----------------+---------+----------+-------+
+| J0726|   2024|       1061|800 MATHESON BLVD...|MISSISSAUGA|  ONTARIO|ONTARIO|      0.0|        0.0|       1|           20579|         240|        NB|  319547|E-TWIZZLER|   301259|  HERSHEY CANADA INC|          FG| 334520.0000|5660081630.0000|  103161|TWIZZLER NIBS CHERRY|TWIZZLER NIBS CHE...|      400| GR|          A|              2.7700|      0.0000|       0.0000|          0.0|              0|                     0|            0.0000|        0.0|     TIER 3|             DISCOUNT|    DOLLARAMA|     885 PLYMOUTH DR|MISSISSAUGA|DOLLARAMA-ONTARIO...|    7500|        0.|                   0.0|5660080630.0000|TEIZZLERS NIBS CH...|  1.7500|   1.7500|        REGULAR|                N|          |         225.0|           GR|       0.0000|        0.0000|            0.0000|             0.0000|       0|        0|        0|     0.0| 0.0000|          0.0|      0.0|          0.0|         0.0|               3.1111112|                3.1111112|       0.0|          1.7777778|    0.0|          0.0000|      0.0|       0.0|  12450|
+| J0607|   2024|       1004|2525 ST CLAIR AVE...|    TORONTO|  ONTARIO|ONTARIO|         |           |       1|           12613|        6630|        NB|  321466|  E-LINDOR|    62364|LINDT & SPRUNGLI ...|         KVI|1772077.0000|3746608030.0000|  116865|         LINDOR MILK|KVI: 120G LINDOR ...|      120| GR|          A|              7.9800|        null|         null|             |               |                  null|              null|           |     TIER 3|             DISCOUNT|      LOBLAWS|    270 THE KINGSWAY|    TORONTO|LOBLAWS-ONTARIO-1004|    7087|          |                      |3746608030.0000|KVI: 120G LINDOR ...|  0.0000|   0.0000|       ITEM N/A|                 |  E-LINDOR|         120.0|           GR|         null|          null|              null|               null|        |         |         |        |   null|             |         |         null|            |                    null|                     null|          |               null|       |            null|         |          |  12450|
+| J0595|   2024|       1081|8300 HWY 27: WOOD...| WOODBRIDGE|  ONTARIO|ONTARIO|         |           |       1|           12613|        6630|        NB|  321466|  E-LINDOR|    62364|LINDT & SPRUNGLI ...|         KVI|1772077.0000|3746608030.0000|  116865|         LINDOR MILK|KVI: 120G LINDOR ...|      120| GR|          A|              7.9800|        null|         null|             |               |                  null|              null|           |   NEXT BES|             DISCOUNT|    NO FRILLS|      1530 ALBION RD| WOODBRIDGE|NO FRILLS-ONTARIO...|    7024|          |                      |3746608030.0000|KVI: 120G LINDOR ...|  0.0000|   0.0000|       ITEM N/A|                 |  E-LINDOR|         120.0|           GR|         null|          null|              null|               null|        |         |         |        |   null|             |         |         null|            |                    null|                     null|          |               null|       |            null|         |          |  12450|
+| J0600|   2024|       1089|7979 11 ST SE: CA...|    CALGARY|     WEST|   WEST|         |           |       1|           12613|        6630|        NB|  321466|  E-LINDOR|    62364|LINDT & SPRUNGLI ...|         KVI|1772077.0000|3746608030.0000|  116865|         LINDOR MILK|KVI: 120G LINDOR ...|      120| GR|          A|              7.9800|        null|         null|             |               |                  null|              null|           |     TIER 2|         CONVENTIONAL|       SOBEYS|7 MAHOGANY PLAZA ...|    CALGARY|    SOBEYS-WEST-1089|    7114|          |                      |3746608030.0000|KVI: 120G LINDOR ...|  0.0000|   0.0000|       ITEM N/A|                 |  E-LINDOR|         120.0|           GR|         null|          null|              null|               null|        |         |         |        |   null|             |         |         null|            |                    null|                     null|          |               null|       |            null|         |          |  12450|
+| J0604|   2024|       1104|3585 GRANDVIEW HW...|  VANCOUVER|     WEST|   WEST|         |           |       1|           12613|        6630|        NB|  321466|  E-LINDOR|    62364|LINDT & SPRUNGLI ...|         KVI|1772077.0000|3746608030.0000|  116865|         LINDOR MILK|KVI: 120G LINDOR ...|      120| GR|          A|              7.9800|        null|         null|             |               |                  null|              null|           |     TIER 2|             DISCOUNT|SAVE ON FOODS|1403 E KING EDWAR...|  VANCOUVER|SAVE ON FOODS-WES...|    7122|          |                      |3746608030.0000|KVI: 120G LINDOR ...|  0.0000|   0.0000|       ITEM N/A|                 |  E-LINDOR|         120.0|           GR|         null|          null|              null|               null|        |         |         |        |   null|             |         |         null|            |                    null|                     null|          |               null|       |            null|         |          |  12450|
++------+-------+-----------+--------------------+-----------+---------+-------+---------+-----------+--------+----------------+------------+----------+--------+----------+---------+--------------------+------------+------------+---------------+--------+--------------------+--------------------+---------+---+-----------+--------------------+------------+-------------+-------------+---------------+----------------------+------------------+-----------+-----------+---------------------+-------------+--------------------+-----------+--------------------+--------+----------+----------------------+---------------+--------------------+--------+---------+---------------+-----------------+----------+--------------+-------------+-------------+--------------+------------------+-------------------+--------+---------+---------+--------+-------+-------------+---------+-------------+------------+------------------------+-------------------------+----------+-------------------+-------+----------------+---------+----------+-------+
+only showing top 5 rows
+
+
+✅ Step 2 Completed: Initial Data Exploration
+📈 Next Step: Detailed Statistical Analysis
+✅ Successfully identified numerical columns:
+   ['wm_year', 'wm_store_id', 'dept_nbr', 'dept_subcatg_nbr', 'fineline_nbr', 'brand_id', 'vendor_id', 'id', 'upc_nbr', 'item_nbr', 'sell_size', 'base_unit_retail_amt', 'wm_reg_price', 'wm_live_price', 'nbr_of_variants_family', 'perc_of_dept_sales', 'store_no', 'comp_upc', 'comp_reg', 'comp_live', 'comp_item_size', 'reg_price_gap', 'live_price_gap', 'reg_price_gap_perc', 'live_price_gap_perc', 'alt_upc', 'alt_item_size', 'comp_reg_equalized_price', 'comp_live_equalized_price', 'equalization_factor', 'comp_multi_price', 'wm_week']
+
+📊 STATISTICAL SUMMARY ANALYSIS
+==================================================
+👤 Analyst: SAMARTH-P-SHET
+📅 Analysis Date: 2025-06-28 18:55:26 UTC
+
+🔢 Numerical Columns (17): ['wm_year', 'wm_store_id', 'dept_nbr', 'dept_subcatg_nbr', 'fineline_nbr', 'brand_id', 'vendor_id', 'item_nbr', 'sell_size', 'nbr_of_variants_family', 'store_no', 'comp_item_size', 'alt_item_size', 'comp_reg_equalized_price', 'comp_live_equalized_price', 'equalization_factor', 'wm_week']
+📝 Categorical Columns (57): ['job_id', 'wm_address', 'wm_city', 'wm_region', 'wm_zone', 'wm_bu_grp', 'wm_bu_grp_2', 'brand_type', 'brand_desc', 'vendor_desc', 'product_type', 'id', 'upc_nbr', 'upc_desc', 'alt_desc', 'uom', 'item_status', 'base_unit_retail_amt', 'wm_reg_price', 'wm_live_price', 'wm_price_type', 'wm_promo_status', 'perc_of_dept_sales', 'market_data', 'banner_type', 'banner_classification', 'banner_name', 'banner_address', 'wm_city1', 'banner_store_id', 'audit_desc', 'size_variance_treshold', 'comp_upc', 'comp_item_desc', 'comp_reg', 'comp_live', 'comp_price_type', 'comp_promo_status', 'comp_brand', 'comp_item_uom', 'reg_price_gap', 'live_price_gap', 'reg_price_gap_perc', 'live_price_gap_perc', 'item_win', 'item_draw', 'item_loss', 'comments', 'alt_upc', 'alt_item_desc', 'alt_brand', 'alt_item_uom', 'match_flag', 'scanned', 'comp_multi_price', 'ispullfwd', 'image_link']
+
+📊 DESCRIPTIVE STATISTICS FOR NUMERICAL VARIABLES
+======================================================================
+✅ Successfully identified numerical columns:
+   ['wm_year', 'wm_store_id', 'dept_nbr', 'dept_subcatg_nbr', 'fineline_nbr', 'brand_id', 'vendor_id', 'id', 'upc_nbr', 'item_nbr', 'sell_size', 'base_unit_retail_amt', 'wm_reg_price', 'wm_live_price', 'nbr_of_variants_family', 'perc_of_dept_sales', 'store_no', 'comp_upc', 'comp_reg', 'comp_live', 'comp_item_size', 'reg_price_gap', 'live_price_gap', 'reg_price_gap_perc', 'live_price_gap_perc', 'alt_upc', 'alt_item_size', 'comp_reg_equalized_price', 'comp_live_equalized_price', 'equalization_factor', 'comp_multi_price', 'wm_week']
+📋 Analyzing 32 numerical columns:
+
+✅ wm_year (int)
+✅ wm_store_id (int)
+✅ dept_nbr (int)
+✅ dept_subcatg_nbr (bigint)
+✅ fineline_nbr (int)
+✅ brand_id (bigint)
+✅ vendor_id (bigint)
+⚠️  id (decimal(18,4)) - Not numerical
+⚠️  upc_nbr (decimal(18,4)) - Not numerical
+✅ item_nbr (bigint)
+✅ sell_size (int)
+⚠️  base_unit_retail_amt (decimal(18,4)) - Not numerical
+⚠️  wm_reg_price (decimal(18,4)) - Not numerical
+⚠️  wm_live_price (decimal(18,4)) - Not numerical
+✅ nbr_of_variants_family (int)
+⚠️  perc_of_dept_sales (decimal(18,4)) - Not numerical
+✅ store_no (int)
+⚠️  comp_upc (decimal(18,4)) - Not numerical
+⚠️  comp_reg (decimal(18,4)) - Not numerical
+⚠️  comp_live (decimal(18,4)) - Not numerical
+✅ comp_item_size (float)
+⚠️  reg_price_gap (decimal(18,4)) - Not numerical
+⚠️  live_price_gap (decimal(18,4)) - Not numerical
+⚠️  reg_price_gap_perc (decimal(18,4)) - Not numerical
+⚠️  live_price_gap_perc (decimal(18,4)) - Not numerical
+⚠️  alt_upc (decimal(18,4)) - Not numerical
+✅ alt_item_size (float)
+✅ comp_reg_equalized_price (float)
+✅ comp_live_equalized_price (float)
+✅ equalization_factor (float)
+⚠️  comp_multi_price (decimal(18,4)) - Not numerical
+✅ wm_week (int)
+
+🎯 Found 17 valid numerical columns
+
+======================================================================
+📈 DESCRIPTIVE STATISTICS
+======================================================================
+📊 Summary Statistics for All Numerical Columns:
++-------+-------+------------------+------------------+------------------+------------------+-----------------+------------------+--------------------+-----------------+----------------------+------------------+-----------------+------------------+------------------------+-------------------------+-------------------+------------------+
+|summary|wm_year|wm_store_id       |dept_nbr          |dept_subcatg_nbr  |fineline_nbr      |brand_id         |vendor_id         |item_nbr            |sell_size        |nbr_of_variants_family|store_no          |comp_item_size   |alt_item_size     |comp_reg_equalized_price|comp_live_equalized_price|equalization_factor|wm_week           |
++-------+-------+------------------+------------------+------------------+------------------+-----------------+------------------+--------------------+-----------------+----------------------+------------------+-----------------+------------------+------------------------+-------------------------+-------------------+------------------+
+|count  |9105081|9105081           |9105081           |9105081           |9105081           |9104520          |9104508           |9105031             |9096779          |2571155               |9104465           |9104437          |2580336           |3144199                 |3193576                  |3389224            |9105081           |
+|mean   |2024.0 |2696.0656309372757|53.99794071024739 |17262.317810352262|3638.6228180726785|329500.3785642736|249436.70270826278|2.721551678386136E7 |317.1304392466828|0.0                   |6663.296892239137 |314.9338406711854|0.7648695324897199|2.3285507471716658      |2.3419862992402085       |0.9579989555714904 |12425.691701259988|
+|stddev |0.0    |1235.5099498112816|37.125624678045185|8825.743394068744 |2482.354094534402 |32866.23282807658|270581.34344885155|1.1579645193773456E7|716.6522130413729|0.0                   |1878.6610599716971|721.9549395408549|23.77639865961981 |6.039367489680074       |5.964363699751769        |0.2265271479078033 |15.125464074349624|
+|min    |2024   |1004              |0                 |0                 |0                 |0                |0                 |0                   |0                |0                     |627               |0.0              |0.0               |0.0                     |0.0                      |0.0                |12401             |
+|max    |2024   |5878              |98                |37997             |9514              |501670           |871350            |50656168            |14184            |0                     |9004              |22968.0          |4266.0            |279.99                  |279.99                   |10.0               |12453             |
++-------+-------+------------------+------------------+------------------+------------------+-----------------+------------------+--------------------+-----------------+----------------------+------------------+-----------------+------------------+------------------------+-------------------------+-------------------+------------------+
+
+
+======================================================================
+🔍 KEY INSIGHTS
+======================================================================
+
+✅ Descriptive analysis completed
+👤 Analyst: SAMARTH-P-SHET | ⏰ Completed: 2025-06-29 09:38:06
+
+📝 CATEGORICAL VARIABLES ANALYSIS
+----------------------------------------
+
+🔍 Analyzing Categorical Variable: wm_region
+   Total Unique Values: 4
+   Top Values:
+     WEST: 3,075,195 (33.77%)
+     ONTARIO: 2,881,046 (31.64%)
+     QUEBEC: 1,635,406 (17.96%)
+     ATLANTIC: 1,513,434 (16.62%)
+{'Column': 'wm_region', 'Unique_Values': 4, 'Most_Frequent': 'WEST', 'Most_Frequent_Count': 3075195, 'Most_Frequent_Percentage': 33.77449360417552}
+
+🔍 Analyzing Categorical Variable: wm_zone
+   Total Unique Values: 4
+   Top Values:
+     WEST: 3,075,195 (33.77%)
+     ONTARIO: 2,881,046 (31.64%)
+     QUEBEC: 1,635,406 (17.96%)
+     ATLANTIC: 1,513,434 (16.62%)
+{'Column': 'wm_zone', 'Unique_Values': 4, 'Most_Frequent': 'WEST', 'Most_Frequent_Count': 3075195, 'Most_Frequent_Percentage': 33.77449360417552}
+
+🔍 Analyzing Categorical Variable: brand_type
+   Total Unique Values: 4
+   Top Values:
+     NB: 8,225,831 (90.34%)
+     PL: 866,147 (9.51%)
+     PB: 13,102 (0.14%)
+     0.0: 1 (0.00%)
+{'Column': 'brand_type', 'Unique_Values': 4, 'Most_Frequent': 'NB', 'Most_Frequent_Count': 8225831, 'Most_Frequent_Percentage': 90.34330392008594}
+
+🔍 Analyzing Categorical Variable: wm_price_type
+   Total Unique Values: 3
+   Top Values:
+     : 6,533,310 (71.75%)
+     0.0: 2,571,155 (28.24%)
+     None: 616 (0.01%)
+{'Column': 'wm_price_type', 'Unique_Values': 3, 'Most_Frequent': '', 'Most_Frequent_Count': 6533310, 'Most_Frequent_Percentage': 71.75455111272487}
+
+🔍 Analyzing Categorical Variable: banner_type
+   Total Unique Values: 6
+   Top Values:
+     TIER 2: 3,589,532 (39.42%)
+     TIER 1: 2,006,587 (22.04%)
+     NEXT BES: 1,394,454 (15.32%)
+     TIER 3: 1,385,843 (15.22%)
+     NEXT BEST: 728,049 (8.00%)
+     None: 616 (0.01%)
+{'Column': 'banner_type', 'Unique_Values': 6, 'Most_Frequent': 'TIER 2', 'Most_Frequent_Count': 3589532, 'Most_Frequent_Percentage': 39.42339447611724}
+
+🔍 Analyzing Categorical Variable: banner_classification
+   Total Unique Values: 5
+   Top Values:
+     DISCOUNT: 6,547,422 (71.91%)
+     CONVENTIONAL: 2,304,813 (25.31%)
+     CLUB: 194,516 (2.14%)
+     SPECIALTY: 57,714 (0.63%)
+     None: 616 (0.01%)
+{'Column': 'banner_classification', 'Unique_Values': 5, 'Most_Frequent': 'DISCOUNT', 'Most_Frequent_Count': 6547422, 'Most_Frequent_Percentage': 71.90954149666543}
+
+🔍 Analyzing Categorical Variable: comp_price_type
+   Total Unique Values: 351
+   Top Values:
+     REGULAR: 3,338,797 (36.67%)
+     ITEM N/A: 2,166,537 (23.79%)
+     Regular: 1,047,510 (11.50%)
+     Item N/A: 968,633 (10.64%)
+     Promo less than 7 days: 523,150 (5.75%)
+     Promo: 309,163 (3.40%)
+     Promo greater than 30 days: 142,327 (1.56%)
+     Price per KG;REGULAR: 95,579 (1.05%)
+     : 85,593 (0.94%)
+     Price per each item; REGULAR: 72,673 (0.80%)
+{'Column': 'comp_price_type', 'Unique_Values': 351, 'Most_Frequent': 'REGULAR', 'Most_Frequent_Count': 3338797, 'Most_Frequent_Percentage': 36.66960239013799}
+
+🔍 Analyzing Categorical Variable: item_status
+   Total Unique Values: 4
+   Top Values:
+     A: 8,649,732 (95.00%)
+     I: 454,732 (4.99%)
+     None: 616 (0.01%)
+     0: 1 (0.00%)
+{'Column': 'item_status', 'Unique_Values': 4, 'Most_Frequent': 'A', 'Most_Frequent_Count': 8649732, 'Most_Frequent_Percentage': 94.99895717566928}
+
+📊 CREATING DATA DISTRIBUTION VISUALIZATIONS
+--------------------------------------------------
+📦 total_count: 9,105,081 records
+📦 Sample size selected for plotting: 1,000,000 records
+✅ Distribution plot saved to GCS at: gs://<gcs_bucket_name>/samarth/00001_Dissertation/EDA Analysis/04_Instore_Weekly_data_analysis/plots/distribution_wm_reg_price.png
+✅ Distribution plot saved to GCS at: gs://<gcs_bucket_name>/samarth/00001_Dissertation/EDA Analysis/04_Instore_Weekly_data_analysis/plots/distribution_wm_live_price.png
+✅ Distribution plot saved to GCS at: gs://<gcs_bucket_name>/samarth/00001_Dissertation/EDA Analysis/04_Instore_Weekly_data_analysis/plots/distribution_comp_reg.png
+✅ Distribution plot saved to GCS at: gs://<gcs_bucket_name>/samarth/00001_Dissertation/EDA Analysis/04_Instore_Weekly_data_analysis/plots/distribution_comp_live.png
+✅ Distribution plot saved to GCS at: gs://<gcs_bucket_name>/samarth/00001_Dissertation/EDA Analysis/04_Instore_Weekly_data_analysis/plots/distribution_reg_price_gap.png
+✅ Distribution plot saved to GCS at: gs://<gcs_bucket_name>/samarth/00001_Dissertation/EDA Analysis/04_Instore_Weekly_data_analysis/plots/distribution_live_price_gap.png
+
+📊 CREATING CATEGORICAL VARIABLES VISUALIZATIONS
+-------------------------------------------------------
+✅ Categorical analysis plot saved to GCS at: gs://<gcs_bucket_name>/samarth/00001_Dissertation/EDA Analysis/04_Instore_Weekly_data_analysis/plots/03_categorical_analysis.png
+
+✅ STEP 3 COMPLETED: STATISTICAL ANALYSIS & VISUALIZATIONS
+=================================================================
+📊 Analysis Summary:
+   • Analyzed 32 numerical variables
+   • Analyzed 8 categorical variables
+   • Generated distribution visualizations
+   • Saved results to GCS storage
+
+📈 Next Step: Correlation Analysis & Business Logic Validation
+👤 Analyst: SAMARTH-P-SHET | ⏰ Completed: 2025-06-28 18:55:26 UTC
+
+🔗 CORRELATION ANALYSIS & BUSINESS LOGIC VALIDATION
+=================================================================
+👤 Current User: SAMARTH-P-SHET
+📅 Analysis Date: 2025-06-28 18:56:39 UTC
+🎯 Focus: Understanding relationships between pricing variables and business metrics
+
+📊 CORRELATION MATRIX ANALYSIS
+----------------------------------------
+🔍 Analyzing correlations for: ['wm_reg_price', 'wm_live_price', 'comp_reg', 'comp_live', 'reg_price_gap', 'live_price_gap', 'reg_price_gap_perc', 'live_price_gap_perc', 'equalization_factor', 'nbr_of_variants_family']
+📈 Sample size for correlation: 564,893 records
+
+📋 CORRELATION MATRIX:
+                        equalization_factor  nbr_of_variants_family
+equalization_factor                     1.0                     NaN
+nbr_of_variants_family                  NaN                     NaN
+
+🎨 CREATING CORRELATION HEATMAP
+-----------------------------------
+✅ Correlation heatmap saved to GCS: 04_correlation_heatmap.png
+
+🏪 BUSINESS LOGIC VALIDATION ANALYSIS
+---------------------------------------------
+
+💰 PRICE GAP ANALYSIS:
+-------------------------
+   Regular Price Gap Calculation Accuracy: 39.10%
+   Live Price Gap Calculation Accuracy: 39.10%
+
+🏆 COMPETITIVE ANALYSIS INSIGHTS
+----------------------------------------
+📊 Competitive Performance Summary:
+   Total Comparisons: 2,571,155
+   Wins: 0 (0.00%)
+   Draws: 0 (0.00%)
+   Losses: 0 (0.00%)
+
+🌍 REGIONAL & STORE PERFORMANCE ANALYSIS
+--------------------------------------------------
+🏪 Regional Performance Summary:
+   WEST: 2,316,447 items, Avg Gap: $-7.42, Win Rate: 72.4%
+   ONTARIO: 2,182,319 items, Avg Gap: $-5.96, Win Rate: 63.0%
+   QUEBEC: 1,378,442 items, Avg Gap: $-4.20, Win Rate: 40.5%
+   ATLANTIC: 1,144,668 items, Avg Gap: $-7.76, Win Rate: 73.3%
+
+📈 PRICE GAP DISTRIBUTION ANALYSIS
+----------------------------------------
+✅ Business analysis plots saved to GCS: 04_business_analysis.png
+
+💾 SAVING CORRELATION & BUSINESS ANALYSIS RESULTS
+-------------------------------------------------------
+✅ Correlation matrix saved to GCS
+✅ Business validation results saved to GCS
+✅ Regional analysis results saved to GCS
+
+🎯 KEY BUSINESS INSIGHTS DISCOVERED
+---------------------------------------------
+📊 Competitive Performance:
+   • Overall Win Rate: 0.0%
+   • Price Gap Accuracy: 39.1% (Regular), 39.1% (Live)
+
+🏪 Regional Insights:
+   • WEST: 2,316,447 items, 72.4% win rate
+   • ONTARIO: 2,182,319 items, 63.0% win rate
+   • QUEBEC: 1,378,442 items, 40.5% win rate
+
+✅ STEP 4 COMPLETED: CORRELATION & BUSINESS LOGIC VALIDATION
+======================================================================
+📈 Next Step: Advanced Analytics & Outlier Detection
+👤 Analyst: SAMARTH-P-SHET | ⏰ Completed: 2025-06-28 18:56:39 UTC
+
+🔬 ADVANCED ANALYTICS & OUTLIER DETECTION
+=======================================================
+👤 Current User: SAMARTH-P-SHET
+📅 Analysis Timestamp: 2025-06-28 18:58:05 UTC
+🎯 Focus: Statistical anomalies, outliers, and advanced analytical insights
+
+📊 ADVANCED STATISTICAL ANALYSIS SETUP
+---------------------------------------------
+🔍 Advanced analysis columns: ['comp_reg', 'comp_live', 'reg_price_gap', 'live_price_gap', 'reg_price_gap_perc', 'live_price_gap_perc', 'equalization_factor']
+✅ Clean sample size: 564,893 records
+
+🎯 OUTLIER DETECTION ANALYSIS
+-----------------------------------
+
+🔍 Analyzing outliers in: comp_reg
+   IQR Method: 27,405 outliers (4.85%)
+   Z-Score Method: 10,605 outliers (1.88%)
+   Modified Z-Score: 27,441 outliers (4.86%)
+   Valid Range (IQR): [-14.98, 24.98]
+
+🔍 Analyzing outliers in: comp_live
+   IQR Method: 27,629 outliers (4.89%)
+   Z-Score Method: 10,498 outliers (1.86%)
+   Modified Z-Score: 34,192 outliers (6.05%)
+   Valid Range (IQR): [-14.23, 23.73]
+
+🔍 Analyzing outliers in: reg_price_gap
+   IQR Method: 0 outliers (0.00%)
+   Z-Score Method: 0 outliers (0.00%)
+   Modified Z-Score: 0 outliers (0.00%)
+   Valid Range (IQR): [0.00, 0.00]
+
+🔍 Analyzing outliers in: live_price_gap
+   IQR Method: 0 outliers (0.00%)
+   Z-Score Method: 0 outliers (0.00%)
+   Modified Z-Score: 0 outliers (0.00%)
+   Valid Range (IQR): [0.00, 0.00]
+
+🔍 Analyzing outliers in: reg_price_gap_perc
+   IQR Method: 0 outliers (0.00%)
+   Z-Score Method: 0 outliers (0.00%)
+   Modified Z-Score: 0 outliers (0.00%)
+   Valid Range (IQR): [0.00, 0.00]
+
+🔍 Analyzing outliers in: live_price_gap_perc
+   IQR Method: 0 outliers (0.00%)
+   Z-Score Method: 0 outliers (0.00%)
+   Modified Z-Score: 0 outliers (0.00%)
+   Valid Range (IQR): [0.00, 0.00]
+
+📋 OUTLIER DETECTION SUMMARY:
+                     IQR_Outliers  IQR_Percentage  ZScore_Outliers  ZScore_Percentage  Modified_ZScore_Outliers  Modified_ZScore_Percentage  Lower_Bound  Upper_Bound      Mean  Median    Std_Dev
+comp_reg                  27405.0        4.851361          10605.0           1.877347                   27441.0                    4.857734      -14.985       24.975  6.847501    3.99  10.138563
+comp_live                 27629.0        4.891015          10498.0           1.858405                   34192.0                    6.052828      -14.235       23.725  6.516380    3.50   9.821930
+reg_price_gap                 0.0        0.000000              0.0           0.000000                       0.0                    0.000000        0.000        0.000  0.000000    0.00   0.000000
+live_price_gap                0.0        0.000000              0.0           0.000000                       0.0                    0.000000        0.000        0.000  0.000000    0.00   0.000000
+reg_price_gap_perc            0.0        0.000000              0.0           0.000000                       0.0                    0.000000        0.000        0.000  0.000000    0.00   0.000000
+live_price_gap_perc           0.0        0.000000              0.0           0.000000                       0.0                    0.000000        0.000        0.000  0.000000    0.00   0.000000
+
+📊 CREATING ADVANCED OUTLIER VISUALIZATIONS
+--------------------------------------------------
+✅ Outlier analysis plots saved to GCS: 05_outlier_analysis.png
+
+🌲 MULTIVARIATE OUTLIER DETECTION (ISOLATION FOREST)
+------------------------------------------------------------
+🔍 Multivariate Analysis Results:
+   Total Records Analyzed: 564,893
+   Multivariate Outliers: 56,014 (9.92%)
+   Normal Records: 508,879
+
+⚠️  BUSINESS LOGIC ANOMALY DETECTION
+---------------------------------------------
+
+📈 ADVANCED STATISTICAL TESTS
+-----------------------------------
+📊 comp_reg:
+   Normality: Non-normal
+   Skewness: 4.324 (Right-skewed)
+   Kurtosis: 53.204
+📊 comp_live:
+   Normality: Non-normal
+   Skewness: 4.445 (Right-skewed)
+   Kurtosis: 55.532
+📊 reg_price_gap:
+   Normality: Non-normal
+   Skewness: 0.000 (Symmetric)
+   Kurtosis: -3.000
+📊 live_price_gap:
+   Normality: Non-normal
+   Skewness: 0.000 (Symmetric)
+   Kurtosis: -3.000
+
+📊 CREATING ADVANCED STATISTICAL VISUALIZATIONS
+-------------------------------------------------------
+✅ Statistical distribution plots saved to GCS: 05_statistical_distributions.png
+
+💾 SAVING ADVANCED ANALYSIS RESULTS
+----------------------------------------
+✅ All advanced analysis results saved to GCS
+
+🎯 ADVANCED ANALYTICS KEY FINDINGS
+---------------------------------------------
+🔍 Outlier Detection Summary:
+   • comp_reg: 27,405 outliers (4.9%)
+   • comp_live: 27,629 outliers (4.9%)
+   • reg_price_gap: 0 outliers (0.0%)
+
+📊 Distribution Characteristics:
+   • comp_reg: Right-skewed, Non-normal distribution
+   • comp_live: Right-skewed, Non-normal distribution
+   • reg_price_gap: Symmetric, Non-normal distribution
+
+✅ STEP 5 COMPLETED: ADVANCED ANALYTICS & OUTLIER DETECTION
+======================================================================
+📈 Next Step: Time Series Analysis & Temporal Patterns
+👤 Analyst: SAMARTH-P-SHET | ⏰ Completed: 2025-06-28 18:58:05 UTC
+
+📅 TIME SERIES ANALYSIS & TEMPORAL PATTERNS
+============================================================
+👤 Current User: SAMARTH-P-SHET
+📅 Analysis Timestamp: 2025-06-28 19:09:14 UTC
+🎯 Focus: Temporal pricing patterns, seasonality, and trend analysis
+
+⏰ TIME SERIES DATA PREPARATION
+----------------------------------------
+🔍 Analyzing temporal data structure...
+📊 Unique weeks in dataset: 51
+📋 Sample week values: [12401, 12402, 12403, 12404, 12405, 12406, 12407, 12408, 12409, 12410]
+✅ Week format parsing completed
+
+📈 WEEKLY PRICING TRENDS ANALYSIS
+----------------------------------------
+📊 Weekly trends data shape: (51, 13)
+📅 Date range: Week 12401 to Week 12453
+
+📋 WEEKLY TRENDS SUMMARY:
+ wm_week  total_items avg_wm_live_price avg_comp_live_price avg_live_price_gap  weekly_win_rate
+   12401       197700              0E-8          6.05785301        -6.36492504        44.989884
+   12402       194893              0E-8          6.03348720        -6.09590394        44.158076
+   12403       194884              0E-8          6.10652234        -6.16532888        44.504423
+   12404       188355              0E-8          6.44277970        -6.21749359        46.839744
+   12405       188987              0E-8          6.55377841        -6.16853828        46.393667
+   12406       188359              0E-8          6.54683625        -6.26223739        47.324524
+   12407       188471              0E-8          6.64874847        -6.36977405        48.171337
+   12408       188300              0E-8          6.71517234        -6.33239099        47.595327
+   12409       186529              0E-8          6.62730515        -6.31948669        47.609219
+   12410       188421              0E-8          6.58270017        -6.23123554        46.719315
+
+🌍 REGIONAL TEMPORAL ANALYSIS
+-----------------------------------
+📊 Regional temporal sample: 100 records
+🏪 Regions analyzed: ['WEST', 'QUEBEC', 'ATLANTIC', 'ONTARIO']...
+
+📊 CREATING TIME SERIES VISUALIZATIONS
+---------------------------------------------
+✅ Time series analysis plots saved to GCS: 06_time_series_analysis.png
+
+🌤️  SEASONAL PATTERN ANALYSIS
+-----------------------------------
+📊 Seasonal patterns by week number:
+ week_number  avg_wm_live_price_mean  avg_wm_live_price_std  avg_live_price_gap_mean  avg_live_price_gap_std  weekly_win_rate_mean  weekly_win_rate_std  total_items_mean
+       12401                     0.0                    NaN                   -6.365                     NaN                44.990                  NaN          197700.0
+       12402                     0.0                    NaN                   -6.096                     NaN                44.158                  NaN          194893.0
+       12403                     0.0                    NaN                   -6.165                     NaN                44.504                  NaN          194884.0
+       12404                     0.0                    NaN                   -6.217                     NaN                46.840                  NaN          188355.0
+       12405                     0.0                    NaN                   -6.169                     NaN                46.394                  NaN          188987.0
+       12406                     0.0                    NaN                   -6.262                     NaN                47.325                  NaN          188359.0
+       12407                     0.0                    NaN                   -6.370                     NaN                48.171                  NaN          188471.0
+       12408                     0.0                    NaN                   -6.332                     NaN                47.595                  NaN          188300.0
+       12409                     0.0                    NaN                   -6.319                     NaN                47.609                  NaN          186529.0
+       12410                     0.0                    NaN                   -6.231                     NaN                46.719                  NaN          188421.0
+✅ Seasonal pattern plots saved to GCS: 06_seasonal_patterns.png
+
+🎯 ADVANCED SEGMENTATION & WEEKLY PRICE SPIKE ANALYSIS
+======================================================================
+👤 Current User: SAMARTH-P-SHET
+📅 Analysis Timestamp: 2025-06-28 19:14:01 UTC
+🎯 Focus: Store clustering, price spike detection, and weekly comparative analysis
+
+📊 ENHANCED WEEKLY PRICE RANGE & SPIKE ANALYSIS
+-------------------------------------------------------
+📈 Enhanced weekly analysis shape: (51, 25)
+⚡ PRICE SPIKE DETECTION RESULTS:
+   wm's Price Spikes: 0 weeks (0.0%)
+   Competitor Price Spikes: 2 weeks (3.9%)
+   Spike Threshold - wm's: ±nan%
+   Spike Threshold - Competitor: ±9.88%
+
+📊 CREATING COMPREHENSIVE WEEKLY PRICE COMPARISONS
+------------------------------------------------------------
+✅ Weekly price analysis plots saved to GCS: 07_weekly_price_analysis.png
+
+📦 PRODUCT CATEGORY SEGMENTATION ANALYSIS
+--------------------------------------------------
+📊 Top product categories analyzed: 20
+✅ Category segmentation plots saved to GCS: 07_category_segmentation.png
+
+💾 SAVING ADVANCED SEGMENTATION RESULTS
+---------------------------------------------
+✅ All advanced segmentation results saved to GCS
+
+🎯 ADVANCED SEGMENTATION KEY INSIGHTS
+--------------------------------------------------
+📊 Weekly Price Spike Analysis:
+   • wm's Price Spikes: 0 weeks detected
+   • Competitor Spikes: 2 weeks detected
+   • Average weekly price volatility: 0.00
+
+🏪 Store Segmentation Results:
+
+📦 Category Performance:
+   • Best performing category: Dept 95 (60.0% win rate)
+   • Total categories analyzed: 20
+   • Average category win rate: 48.5%
+
+✅ STEP 7 COMPLETED: ADVANCED SEGMENTATION & WEEKLY ANALYSIS
+===========================================================================
+📈 Next Step: Final Report & Strategic Recommendations
+👤 Analyst: SAMARTH-P-SHET | ⏰ Completed: 2025-06-28 19:14:01 UTC
+
+📑 FINAL REPORT & STRATEGIC RECOMMENDATIONS
+=================================================================
+👤 Current User Login: SAMARTH-P-SHET
+📅 Analysis Completion: 2025-06-28 19:18:07 UTC
+🎯 Report Type: Master's Level Data Science - Comprehensive EDA Analysis
+📊 Dataset: Retail Competitive Pricing Intelligence
+
+📋 EXECUTIVE SUMMARY COMPILATION
+----------------------------------------
+📊 EXECUTIVE SUMMARY COMPILED:
+   Dataset Scope: 9,105,081 records across 51 weeks
+   Store Coverage: 77 stores in 4 regions
+   Overall Win Rate: 48.9%
+   Average Price Gap: $-6.39
+   Competitive Status: Needs Attention
+
+🔍 KEY FINDINGS COMPILATION
+-----------------------------------
+🎯 KEY FINDINGS IDENTIFIED:
+   • Data Quality: High-quality dataset with minimal missing values
+   • Pricing Trends: Average price differential of $-6.39 vs competitors
+   • Temporal Patterns: Price volatility detected in 0 weeks
+   • Regional Performance: Significant regional performance variations identified
+   • Segmentation Insights: Optimal store clustering into N/A distinct segments
+
+🎯 STRATEGIC RECOMMENDATIONS FRAMEWORK
+--------------------------------------------------
+📋 STRATEGIC RECOMMENDATIONS COMPILED:
+   Immediate Actions: 2 recommendations
+   Short-term Initiatives: 2 recommendations
+   Long-term Strategic: 2 recommendations
+
+🔍 COMPREHENSIVE DATA QUALITY REPORT
+---------------------------------------------
+📊 DATA QUALITY ASSESSMENT:
+   Consistency: Good - 39.1%
+   Outliers: Acceptable - Validated
+   Timeliness: Current - Validated
+
+📊 CREATING FINAL COMPREHENSIVE DASHBOARD
+--------------------------------------------------
+✅ Final executive dashboard saved to GCS: 08_final_executive_dashboard.png
+25/06/29 18:58:39 INFO org.spark_project.jetty.server.AbstractConnector: Stopped Spark@21cac205{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
